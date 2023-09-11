@@ -8,7 +8,7 @@ jobs:
           # - { icon: 🐧, name: ubuntu  }
           # - { icon: 🍎, name: macos   }
           - { icon: 🪟, name: windows }
-        perl: [ '5.38' ]
+        perl: [ '5.32' ]
     name: 🐪 Perl ${{ matrix.perl }} on ${{ matrix.os.icon }}
     runs-on: ${{ matrix.os.name }}-latest
     steps:
