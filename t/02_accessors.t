@@ -13,7 +13,7 @@ my $filename = catfile(qw(t files test.md));
 open(my $file, '<', $filename)
     or die("$filename: $!");
 ok 1, 'opened';
-my $doc = CommonMark->parse_file($file);
+my $doc = CommonMark->parse_file($filename);
 ok 1, 'parsed';
 close($file);
 ok 1, 'closed';
