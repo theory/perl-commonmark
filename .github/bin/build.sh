@@ -22,4 +22,4 @@ curl -sL "https://github.com/jgm/cmark/archive/${VERSION}.tar.gz" | tar xz
 printf "Building and testing CommonMark\n"
 perl Makefile.PL INC=-I"${PREFIX}/include" LIBS=-L"${PREFIX}/lib -lcmark"
 make
-make test
+make test TEST_VERBOSE=1
