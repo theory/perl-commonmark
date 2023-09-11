@@ -8,13 +8,18 @@ BEGIN {
     use_ok('CommonMark', ':all');
 }
 
+ok 1, 'used';
 my $filename = catfile(qw(t files test.md));
 open(my $file, '<', $filename)
     or die("$filename: $!");
+ok 1, 'opened';
 my $doc = CommonMark->parse_file($file);
+ok 1, 'parsed';
 close($file);
+ok 1, 'closed';
 
 isa_ok($doc, 'CommonMark::Node', 'parse_file');
+ok 1, 'isa_ok';
 
 my $header = $doc->first_child;
 is($header->get_type, NODE_HEADER, 'get_type');

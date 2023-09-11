@@ -10,7 +10,6 @@ BEGIN {
 
 {
     my $filename = catfile(qw(t files test.md));
-    my $filename = 't/files/test.md';
     my $file;
 
     open($file, '<', $filename) or die("$filename: $!");
