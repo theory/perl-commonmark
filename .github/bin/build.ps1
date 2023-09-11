@@ -19,4 +19,4 @@ cd ..
 echo "Building and testing CommonMark"
 $env:PATH += ";${PREFIX}/bin"
 perl Makefile.PL INC="-I${PREFIX}/include" LIBS="-L${PREFIX}/lib -lcmark"
-make test
+make test TEST_VERBOSE=1
